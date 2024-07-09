@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>tic tac toe</title>
+    <meta charset="utf-8" />
+    <script src="wasm_exec.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <a id="source_code" style="float:right;margin-right:10px;" href="https://github.com/2asm/tic_tac_toe">source code</a>
+    <br/>
+    <div id="body2"> 
+        <h2>Tic Tac Toe</h2>
+        <p id="youbot"></p>
+
+        <table id="box3">
+            <tbody>
+                <tr id="row1">
+                    <td><button class="btn" id="00">X</button></td>
+                    <td><button class="btn" id="01">X</button></td>
+                    <td><button class="btn" id="02">X</button></td>
+                </tr>
+                <tr id="row2">
+                    <td><button class="btn" id="10">X</button></td>
+                    <td><button class="btn" id="11">X</button></td>
+                    <td><button class="btn" id="12">X</button></td>
+                </tr>
+                <tr id="row3">
+                    <td><button class="btn" id="20">X</button></td>
+                    <td><button class="btn" id="21">X</button></td>
+                    <td><button class="btn" id="22">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <br/>
+        <button id="restart">RESTART</button>
+
+        <br/>
+        <h3 id="result"></h3>
+    </div>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("ttt.wasm"), go.importObject).then((result) => {go.run(result.instance);});
+    </script>
+</body>
+
+</html>

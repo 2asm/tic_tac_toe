@@ -1,0 +1,28 @@
+#body2 {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    float: center;
+}
+
+table {
+    margin: 0px;
+    display: inline-block;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    border-radius: 0px;
+    border-style: 4px bold black;
+    color: transparent;
+    font-weight: bold;
+    box-shadow: none;
+}

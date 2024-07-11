@@ -21,7 +21,7 @@ table {
     margin: 0px;
     font-size: 40px;
     border-radius: 0px;
-    border-style: 4px bold black;
+    border: 2px solid lightgrey;
     color: transparent;
     font-weight: bold;
     box-shadow: none;

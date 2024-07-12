@@ -105,6 +105,7 @@ func (g *game) Start() {
 			g.renderInfo()
 			g.render()
 		case c := <-playerMoveChan: // human turn
+			g.render()
 			if g.ended() || g.turn != 1 {
 				break
 			}
@@ -112,6 +113,7 @@ func (g *game) Start() {
 			g.turn ^= 1
 			g.render()
 		default: // bot turn
+			g.render()
 			time.Sleep(time.Millisecond * 200)
 			if g.ended() || g.turn != 0 {
 				break
